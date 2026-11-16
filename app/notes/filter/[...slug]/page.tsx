@@ -4,7 +4,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
-import { fetchNotes } from '@/lib/api';
+import { fetchNotes } from '@/lib/api/notes';
 import { ALL_NOTES_FILTER } from '@/lib/constants';
 import { getTagFromSlug } from '@/lib/utils';
 import NotesClient from './Notes.client';

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { useDebouncedCallback } from 'use-debounce';
 import { Toaster } from 'react-hot-toast';
-import { fetchNotes } from '@/lib/api';
+import { fetchNotes } from '@/lib/api/notes';
 import { ALL_NOTES_FILTER } from '@/lib/constants';
 import type { NoteTag } from '@/types/note';
 import SearchBox from '@/components/SearchBox/SearchBox';
