@@ -70,7 +70,6 @@ export default function NoteForm() {
       });
       clearDraft();
       toast.success('Note created');
-      goBack();
     },
     onError: () => {
       toast.error('Failed to create the note. Please try again.');
@@ -104,7 +103,11 @@ export default function NoteForm() {
       });
 
       setErrors({});
-      mutate(newNote);
+      mutate(newNote, {
+        // runs only while the form is still open: after Cancel during the request
+        // the user has already returned and must not be sent back once more
+        onSuccess: () => goBack(),
+      });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         setErrors(getFormErrors(error));
