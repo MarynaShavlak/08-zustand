@@ -25,6 +25,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  /* the button is a link to the create note page */
+  text-decoration: none;
 }
 
 .button:hover {

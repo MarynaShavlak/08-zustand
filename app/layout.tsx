@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Roboto } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 import 'modern-normalize/modern-normalize.css';
 import './globals.css';
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
@@ -50,6 +51,8 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
           {modal}
           <Footer />
         </TanStackProvider>
+        {/* the notifications stay visible after navigating to another page */}
+        <Toaster position="top-right" />
       </body>
     </html>
   );
