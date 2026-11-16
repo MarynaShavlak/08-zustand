@@ -85,7 +85,7 @@ export default function NoteForm() {
     setErrors((prevErrors) => ({ ...prevErrors, [field]: undefined }));
   };
 
-  // React resets a form after its action, but here every field is controlled by the draft:
+  // React resets a form after its form action, but here every field is controlled by the draft:
   // the reset is cancelled, otherwise the select would show the first tag instead of the saved one
   const handleReset = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -113,7 +113,7 @@ export default function NoteForm() {
   };
 
   return (
-    <form className={css.form} action={handleSubmit} onReset={handleReset}>
+    <form className={css.form} onReset={handleReset}>
       <div className={css.formGroup}>
         <label htmlFor="title">Title</label>
         <input
@@ -163,7 +163,12 @@ export default function NoteForm() {
         <button type="button" className={css.cancelButton} onClick={goBack}>
           Cancel
         </button>
-        <button type="submit" className={css.submitButton} disabled={isPending}>
+        <button
+          type="submit"
+          className={css.submitButton}
+          formAction={handleSubmit}
+          disabled={isPending}
+        >
           {isPending ? 'Creating...' : 'Create note'}
         </button>
       </div>
