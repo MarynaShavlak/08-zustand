@@ -5,7 +5,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
-import { fetchNotes } from '@/lib/api/notes';
+import { fetchNotes } from '@/lib/api';
 import { ALL_NOTES_FILTER } from '@/lib/constants';
 import { OG_IMAGE, SITE_NAME, SITE_URL } from '@/lib/seo';
 import { getTagFromSlug } from '@/lib/utils';

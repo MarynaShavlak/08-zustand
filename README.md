@@ -114,11 +114,9 @@ components/
 ├── SearchBox/
 └── TanStackProvider/
 lib/
-├── api/
-│   ├── api.ts
-│   └── notes.ts
 ├── store/
 │   └── noteStore.ts
+├── api.ts
 ├── constants.ts
 ├── seo.ts
 └── utils.ts

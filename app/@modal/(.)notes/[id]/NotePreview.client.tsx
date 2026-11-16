@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
-import { fetchNoteById } from '@/lib/api/notes';
+import { fetchNoteById } from '@/lib/api';
 import { formatDate } from '@/lib/utils';
 import Modal from '@/components/Modal/Modal';
 import type { Note } from '@/types/note';

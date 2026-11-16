@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import * as Yup from 'yup';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
-import { createNote } from '@/lib/api/notes';
+import { createNote } from '@/lib/api';
 import { NOTE_TAGS } from '@/lib/constants';
 import { useNoteStore } from '@/lib/store/noteStore';
 import type { NewNote, NoteTag } from '@/types/note';
