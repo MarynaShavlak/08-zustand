@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE, SITE_NAME, SITE_URL } from '@/lib/seo';
 import css from './Home.module.css';
 
+const title = '404 - Page not found | NoteHub';
+const description =
+  'Sorry, the page you are looking for does not exist in NoteHub.';
+
 export const metadata: Metadata = {
-  title: 'Page not found | NoteHub',
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: `${SITE_URL}/not-found`,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
+    type: 'website',
+  },
 };
 
 export default function NotFound() {

@@ -28,3 +28,19 @@ export const getTagFromSlug = (slug: string[]): NoteTag | undefined | null => {
 
   return isNoteTag(filter) ? filter : null;
 };
+
+const DESCRIPTION_MAX_LENGTH = 160;
+
+// a one-line excerpt of the note content for the description meta tags
+export const getExcerpt = (
+  text: string,
+  maxLength = DESCRIPTION_MAX_LENGTH,
+): string => {
+  const normalized = text.replace(/\s+/g, ' ').trim();
+
+  if (normalized.length <= maxLength) {
+    return normalized;
+  }
+
+  return `${normalized.slice(0, maxLength - 1).trimEnd()}…`;
+};
