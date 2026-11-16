@@ -6,6 +6,8 @@ Router). Фінальна версія проєкту: SEO-метадані та
 чернетки за допомогою Zustand. Дані зберігаються на бекенді
 [NoteHub API](https://notehub-public.goit.study/api/docs).
 
+**Демо:** https://08-zustand-xi-bay.vercel.app
+
 ## Маршрути
 
 - `/` — головна сторінка із загальною інформацією про NoteHub
